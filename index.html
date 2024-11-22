@@ -1,101 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broadcast Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Publishing Advertisement</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #0073e6, #00c6ff);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .header p {
+      font-size: 12px;
+      margin: 5px 0;
+      opacity: 0.9;
+    }
+
+    .platforms {
+      margin: 15px 0;
+    }
+
+    .platforms h2 {
+      font-size: 16px;
+      border-left: 4px solid #00c6ff;
+      padding-left: 8px;
+      margin-bottom: 10px;
+    }
+
+    .platforms ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .platforms ul li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      padding: 8px;
+      margin-bottom: 8px;
+    }
+
+    .platforms ul li img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .platforms ul li span {
+      font-weight: bold;
+      background: #004a99;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    .instructions {
+      margin: 15px 0;
+      font-size: 12px;
+    }
+
+    .instructions p {
+      margin: 5px 0;
+    }
+
+    .instructions strong {
+      color: #00c6ff;
+    }
+
+    .payment-details {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .payment-details h3 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .payment-details p {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #00c6ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #004a99;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 10px;
+      margin-top: 10px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Broadcast Dashboard</h1>
-        <form id="broadcastForm">
-            <div class="form-group">
-                <label for="streamName">Stream Name</label>
-                <input type="text" id="streamName" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" required></textarea>
-            </div>
-            <button type="submit">Start Broadcast</button>
-        </form>
-        <div id="viewerLinkContainer" class="hidden">
-            <p>Share this link with your audience:</p>
-            <a id="viewerLink" href="#" target="_blank"></a>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>Publish Your App Now!</h1>
+      <p>Join thousands of developers publishing on top platforms.</p>
     </div>
-    <script>
-        document.getElementById('broadcastForm').addEventListener('submit', function(event) {
-            event.preventDefault();
 
-            const streamName = document.getElementById('streamName').value;
-            const description = document.getElementById('description').value;
+    <div class="platforms">
+      <h2>Pricing</h2>
+      <ul>
+        <li>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png" alt="Amazon Logo">
+          Amazon
+          <span>NGN 7,000</span>
+        </li>
+        <li>
+          <img src="https://cdn.worldvectorlogo.com/logos/galaxy-store.svg" alt="Galaxy Store Logo">
+          Galaxy Store
+          <span>NGN 12,000</span>
+        </li>
+        <li>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Palm_logo.png" alt="Palm Store Logo">
+          Palm Store
+          <span>NGN 18,000</span>
+        </li>
+        <li>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Store Logo">
+          Google Play
+          <span>NGN 30,000</span>
+        </li>
+      </ul>
+    </div>
 
-            // Replace with actual SDK initialization and broadcast start
-            const dolbyio = new Dolbyio({
-                apiKey: 'YOUR_API_KEY',
-                apiSecret: '864b77006901e47f586971a14fbe92d77f69130527719c9a9f267ee84249770a',
-            });
+    <div class="instructions">
+      <p><strong>Steps:</strong></p>
+      <p>1. Make a <strong>half-payment</strong> to begin.</p>
+      <p>2. Remaining payment after app is published.</p>
+      <p><em>No processing without initial payment.</em></p>
+    </div>
 
-            dolbyio.startBroadcast({
-                streamName: streamName,
-                description: description,
-            }).then(broadcast => {
-                const viewerLink = dolbyio.getViewerLink();
-                document.getElementById('viewerLink').href = viewerLink;
-                document.getElementById('viewerLink').textContent = viewerLink;
-                document.getElementById('viewerLinkContainer').classList.remove('hidden');
-            }).catch(error => {
-                console.error('Error starting broadcast:', error);
-                alert('Failed to start broadcast. Please try again.');
-            });
-        });
-    </script>
+    <div class="payment-details">
+      <h3>Payment Information</h3>
+      <p><strong>Account Name:</strong> Daniel Daniel Nwa</p>
+      <p><strong>Bank:</strong> Opay</p>
+      <p><strong>Account Number:</strong> 611-142-4901</p>
+    </div>
+
+    <div class="cta">
+      <a href="#">Start Publishing</a>
+    </div>
+
+    <div class="footer">
+      <p>© 2024 App Publishing Services. All Rights Reserved.</p>
+    </div>
+  </div>
 </body>
 </html>
